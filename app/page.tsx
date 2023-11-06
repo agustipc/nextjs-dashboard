@@ -3,6 +3,7 @@ import styles from './ui/home.module.css'
 
 import Link from 'next/link'
 import { lusitana } from './ui/fonts'
+import Image from 'next/image'
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
@@ -30,6 +31,21 @@ export default function Page() {
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
+          {/* cambia el formato y hace que pese menos  // ademas es lazy load, si no aparece no carga la imagen */}
+          <Image
+            src={'/hero-desktop.png'}
+            alt="Screenshots of the dashboard"
+            width={1000}
+            height={760}
+            className="hidden md:block"
+          />
+          <Image
+            src={'/hero-mobile.png'}
+            alt="Screenshots of the dashboard"
+            width={1000}
+            height={760}
+            className="block md:hidden"
+          />
         </div>
       </div>
     </main>
