@@ -12,7 +12,7 @@ export default function RootLayout({
         className={`${montserrat.className} antialiased min-h-screen relative`}
       >
         {children}
-        <footer className="py-10 flex justify-center items-center  absolute bottom-0 w-screen">
+        <footer className="my-10 flex justify-center items-center  absolute bottom-0 w-screen">
           Hecho con ❤️ por AgustiPC con Next.js
         </footer>
       </body>
